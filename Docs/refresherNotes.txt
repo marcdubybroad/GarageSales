@@ -67,7 +67,30 @@ Notes:
   - gradle.settings
     - include ':app'        -> includes module app, which is the main application; think of app as a module
   - .gradle/wrapper         -> has a gradle.jar with the version used to compile; .properties file specifies version
+  - in gradle.properties
+    - org.gradle.parallel=true   -> can compile multiple modules at the same time
+    - org.gradle.daemon=true     -> keeps the jvm up at all times, mkes serial builds faster through the development day
+  - with existing projects, upgrade to gradle 2.2.4
+    - go into gradle/wrapper/gradle-wrapper.properties, change the distributionUrl to the wanted version
+      - big performance improvement from 2.2.1 to 2.4
+      - gradle-2.4-all.zip
+  - anything you can do with a button can do from command line; equivalent process, which is why they switched to gradle
   
+
+ToDo:
+  - sned email after conference to get new version w/o typos
+  
+- Unit testing
+  - androidTest directory is where they should go; will not be included in apk
+  - use same pcakged structure for visibility
+  - running as android test, deploys build/outputs/apk/app-debug-androidTest-unaligned.apk
+  - can get visual list on left
+    - right click on test, can get statistics
+  - @UiThreadTest  -> can only change a UI element off of the UI thread (tests run on a seperate thread)
+  - Espresso testing   -> framework recomemnded to do UI testing on Android
+  
+    
+      
 - apk manager
   - if want google mobile services, need to install google API
   - same with tv and wear
@@ -85,4 +108,22 @@ Notes:
   - need to add following to app/build.gradle
     -     compile project(':garagze-library')
 
-
+- emulators
+  - genymotion emulators, good and robust, free versions
+    - does not support google mobile services
+    - runs on virtualBox
+    
+    
+- sayings
+  - functionality before performance
+  - how long should a man's legs be? Long enough to reach the ground (Abraham Lincoln)
+  
+    
+- tips
+  - go to Canary channel Android Studio a week after new release; usually bugs already fixed by then
+  - state farm has 2x testing code than production code; at the functional extreme
+  
+- terminal mode
+  - gradle commands that can be run
+    -ex: gradlew :app:generatedDebugSources
+    
