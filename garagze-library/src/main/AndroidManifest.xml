@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.garagze.event">
+
+    <application>
+
+        <provider
+            android:authorities="com.garagze.event.provider.SaleEventProvider"
+            android:name=".provider.SaleEventProvider"/>
+
+    </application>
+
+</manifest>
