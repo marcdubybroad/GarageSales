@@ -4,6 +4,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.garagze.event.service.SaleEventManager;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +15,14 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // add in code for the loading of events
+        int eventCount = this.getEventCount();
+
+        // build and display the count string
+        String displayText = "Number of events is: " + eventCount;
+        TextView textView = (TextView) this.findViewById(R.id.textView);
+        textView.setText(displayText);
     }
 
     @Override
@@ -34,5 +45,14 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * return the event count for the sales events
+     *
+     * @return
+     */
+    private int getEventCount() {
+        return SaleEventManager.getAllEvents(this).size();
     }
 }

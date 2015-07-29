@@ -1,0 +1,88 @@
+
+
+
+
+Welcome to Android Bootcamp
+
+Bookmark this site - we will use it in class
+
+James Harmon
+jamesharmon@gmail.com
+630-344-9059 (voice or text)
+ 
+Internet:  Sheraton Meeting  (adcboston2015)
+ 
+ Logistics
+ 
+   9:00 - 5:00
+   10:30 - 10:45 - Break - Ballroom Foyer
+   12:30 - 1:30 - Lunch - Back Bay A-B-C
+    3:00 - 3:15 - Break, Ballroom Foyer
+
+ 
+ Download and Install Android Studio using instructions at this site:
+ 
+      http://developer.android.com/sdk/index.html
+
+Shared DropBox Folder (verify that you can reach it)
+
+  https://goo.gl/QAZjaC
+ 
+Experience
+
+University of Illinois at Urbana-Champaign
+BS in Computer Science
+
+http://www.andevcon.com/boston/speakers#JamesHarmon
+
+http://dss7000.midtronics.com/en-us/
+
+My LinkedIn profile
+https://www.linkedin.com/profile/view?id=698831
+
+
+Name / Department / Job
+Experience in Java 
+Experience in Mobile
+Experience in Android
+What you are looking for
+
+
+objecttraininggroup.com
+
+
+
+
+Notes:
+
+
+- min sdk is pretty much 15 from now on, 4.0
+
+- adb commands
+  - adb shell
+  - add uninstall com.garagesalesapp
+  - adb install app-debug.apk
+  
+- gradle
+  - gradle.settings
+    - include ':app'        -> includes module app, which is the main application; think of app as a module
+  - .gradle/wrapper         -> has a gradle.jar with the version used to compile; .properties file specifies version
+  
+- apk manager
+  - if want google mobile services, need to install google API
+  - same with tv and wear
+  
+- libraries
+  - in garagze-library/build.gradle
+    -   apply plugin: 'android-library'         -> specifies that this is a library, cannot be run as a standalone app
+    
+    
+- android studio
+  - anytime you see something in grey, it is something that doesn't really exist but is translated by the IDE for you
+    - ex: and R.id.* value
+    
+- Refresher erratta
+  - need to add following to app/build.gradle
+    -     compile project(':garagze-library')
+
+
